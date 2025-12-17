@@ -1,5 +1,8 @@
 import { Card, CardContent } from '@/components/ui/card';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Shield, Brain, Code, Lock } from 'lucide-react';
+
+const PROFILE_IMAGE_URL = 'https://raw.githubusercontent.com/ezekielologunde/ezekielologunde/main/IMG_8794.JPG';
 
 const focusAreas = [
   {
@@ -50,6 +53,17 @@ export default function AboutSection() {
           </div>
 
           <div className="bg-card/50 border border-border rounded-lg p-6 lg:p-8">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6">
+              <Avatar className="w-32 h-32 border-2 border-primary/30" data-testid="img-profile">
+                <AvatarImage src={PROFILE_IMAGE_URL} alt="Ezekiel Ologunde" />
+                <AvatarFallback className="text-3xl font-bold bg-primary/20 text-primary">EO</AvatarFallback>
+              </Avatar>
+              <div className="text-center sm:text-left">
+                <h3 className="text-2xl font-bold mb-1">Ezekiel Ologunde</h3>
+                <p className="text-primary font-mono text-sm mb-2">Cybersecurity & AI/ML Specialist</p>
+                <p className="text-muted-foreground text-sm">D.Eng. Candidate | CEH | Security+</p>
+              </div>
+            </div>
             <p className="text-lg leading-relaxed mb-4">
               I am a dedicated <span className="text-primary font-semibold">cybersecurity professional</span> and{' '}
               <span className="text-success font-semibold">AI/ML specialist</span> with extensive experience in
