@@ -81,6 +81,13 @@ export default {
           busy: "rgb(239 68 68)",
           offline: "rgb(156 163 175)",
         },
+        cyber: {
+          DEFAULT: "hsl(195 100% 60% / <alpha-value>)",
+          glow: "hsl(195 100% 60% / 0.3)",
+        },
+        success: {
+          DEFAULT: "hsl(146 85% 50% / <alpha-value>)",
+        },
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
